@@ -8,6 +8,8 @@ on:
     branches:
       - master
       - develop
+  page_build:
+
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
