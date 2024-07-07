@@ -1,7 +1,13 @@
 name: branch-validator
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
-  - push
+  label:
+    types:
+      - created
+  push:
+    branches:
+      - master
+      - develop
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
