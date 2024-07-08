@@ -16,5 +16,5 @@ jobs:
     steps:
       - uses: goshencollege/validate-branch-name@v1.0.1
         with:
-          pattern: "[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30}"
+          pattern: "(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
 
