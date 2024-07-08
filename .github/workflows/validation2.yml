@@ -1,9 +1,7 @@
 name: branch-validator
 on:
-  push:
-    branches-ignore:
-      - master
-      - develop
+  create
+  
 jobs:
   branch_validator:
     runs-on: ubuntu-latest
