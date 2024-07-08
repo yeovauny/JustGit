@@ -1,6 +1,10 @@
 name: branch-validator
 
-on: push
+on:
+  push:
+    branches-ignore:
+      - master
+
 
 jobs:
   check-bats-version:
