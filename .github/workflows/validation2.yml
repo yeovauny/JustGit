@@ -1,6 +1,9 @@
 name: branch-validator
-on: pull_request
-
+on:
+  push:
+    branches-ignore:
+      - master
+      - develop
 jobs:
   check_pr:
     runs-on: ubuntu-latest
