@@ -1,10 +1,6 @@
 name: branch-validator
 run-name: ${{ github.actor }} is learning GitHub Actions
-on:
-  push:
-    branches:
-      - "(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
-
+on: push
 
 jobs:
   check-bats-version:
