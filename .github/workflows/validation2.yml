@@ -16,9 +16,9 @@ jobs:
           echo "branch name: $branch_name"
           
           if [[ "$branch_name" =~ $branch_name ]]; then
-            echo "Branch name matches the  regex pattern."
+            echo "Branch name matches the  regex pattern"
             if [[ "$target_branch" != "regex" ]]; then
-              echo "but doesn't match target branch"
+              echo "but doesnt match target branch"
               exit 1
             fi
         shell: bash
