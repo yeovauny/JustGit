@@ -18,8 +18,5 @@ jobs:
           if [[ $branch_name =~ $branch_name ]]; then
             echo "correct branch name"
             exit 1
-            if [[ $branch_name != $branch_name ]]; then
-              echo "but doesnt match target branch"
-              exit 1
             fi
         shell: bash
