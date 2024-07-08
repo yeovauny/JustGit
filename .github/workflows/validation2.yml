@@ -15,7 +15,6 @@ jobs:
           echo "target branch: $target_branch"
           regex="(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
           
-          
           if [[ "$branch_name" =~ $regex ]]; then
             echo "Branch name matches the  regex pattern."
             if [[ "$target_branch" != "regex" ]]; then
