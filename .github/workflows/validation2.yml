@@ -14,10 +14,10 @@ jobs:
         run: |
           branch_name=${{ github.ref }}
           echo "branch name: $branch_name"
-          regex="^(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
-          if [ "$branch_name" =~ $regex ]
+          regex="(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
+          if [["$branch_name" =~ $regex ]];
           then
-            echo "correct branch name"
+            echo "correct branch name";
           else
             echo "Branch name does not match any regex. Exiting..."
             exit 1
