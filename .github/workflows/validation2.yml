@@ -1,18 +1,25 @@
 name: branch-validator
-
-on:
-  push:
-    branches-ignore:
-      - master
-      - develop
-
+on: pull_request
 
 jobs:
-  check-bats-version:
+  check_pr:
     runs-on: ubuntu-latest
+
     steps:
-      - name: say hellow to the world
-        run: echo "hello , world"
-      - uses: goshencollege/validate-branch-name@v1.0.1
-        with:
-          pattern: "(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
+      - name: Cheking branch name
+        run: |
+          branch_name=${GITHUB_HEAD_REF}
+          echo "pr branch name: $branch_name"
+          
+          target_branch=${GITHUB_BASE_REF}
+          echo "target branch: $target_branch"
+          regex="(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
+          
+          
+          if [[ "$branch_name" =~ $regex ]]; then
+            echo "Branch name matches the  regex pattern."
+            if [[ "$target_branch" != "regex" ]]; then
+              echo "but doesn't match target branch"
+              exit 1
+            fi
+        shell: bash
