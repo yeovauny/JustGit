@@ -12,7 +12,7 @@ jobs:
         run: echo "hello, world!"
       - name: Cheking branch name
         run: |
-          branch_name=${{ github.ref }}"
+          branch_name=${{ github.ref }}
           echo "branch name: $branch_name"
           if [ $branch_name =~ $branch_name ]
           then
