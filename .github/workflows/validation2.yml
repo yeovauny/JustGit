@@ -5,8 +5,8 @@ on:
       - master
       - develop
 jobs:
-  check_pr:
-    runs-on: checkBranchValidator
+  branch_validator:
+    runs-on: ubuntu-latest
     steps:
       - name: say hello to the world
         run: echo "hello, world!"
