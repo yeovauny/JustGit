@@ -14,9 +14,7 @@ jobs:
         run: |
           branch_name=${{ github.ref }}"
           echo "pr branch name: $branch_name"
-
-          regex="(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
-
+          regex="^(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
           if [[ "$branch_name" =~ $regex ]]; then
             echo "Branch name matches the  regex pattern."
             if [[ "$target_branch" != "regex" ]]; then
