@@ -11,6 +11,8 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - name: say hellow to the world
+        run: echo "hello , world"
       - uses: goshencollege/validate-branch-name@v1.0.1
         with:
           pattern: "(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
