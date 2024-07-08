@@ -14,7 +14,8 @@ jobs:
         run: |
           branch_name=${{ github.ref }}"
           echo "branch name: $branch_name"
-          if [[ $branch_name =~ $branch_name ]]; then
+          if [ $branch_name =~ $branch_name ]
+          then
             echo "correct branch name"
           else
             echo "Branch name does not match any regex. Exiting..."
