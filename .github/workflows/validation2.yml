@@ -17,7 +17,7 @@ jobs:
           regex="(master|develop|[A-Z]{4,5}-[0-9]{4,5}-[A-Za-z]{5,30})"
           echo "regrex validotir: $regrex"
           echo "is equal $branch_name =~ $regex"
-          if [ $branch_name =~ $regex ]
+          if [[ $branch_name =~ $regex ]] ;
           then
             echo "correct branch name";
           else
