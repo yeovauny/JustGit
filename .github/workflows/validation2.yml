@@ -15,8 +15,8 @@ jobs:
           branch_name=${{ github.ref }}"
           echo "branch name: $branch_name"
           
-          if [[ "$branch_name" =~ $branch_name ]]; then
-            echo "Branch name matches the  regex pattern"
+          if [[ "$branch_name" =~ "$branch_name" ]]; then
+            exit 1
             if [[ "$target_branch" != "regex" ]]; then
               echo "but doesnt match target branch"
               exit 1
